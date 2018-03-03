@@ -19,10 +19,29 @@ bot.on("message", message => {
     // Commands
         var command = message.content.split(" ")[0].substring(config.prefix.length);
 
+        var arguments = message.content.substring(command.length + config.prefix.length + 1).split(" ");
+
         switch (command) {
             case "ping":
                 message.channel.send("Pong!");
                 break;
+            case "mote":
+                message.channel.send(":`: :" + message.content.substring(command.length + config.prefix.length + 1) + ": :`:");
+                break;
+            case "square":
+                message.channel.send(parseInt(arguments[0]) ** 2);
+                break;
+            case "cube":
+                message.channel.send(parseInt(arguments[0]) ** 3);
+                break;
+            case "root":
+                message.channel.send(Math.sqrt(arguments[0]));
+                break;
+            case "say":
+                message.channel.send(message.content.substring(command.length + config.prefix.length + 1));
+                break;
+
+
             default:
                 message.channel.send("Command not found!");
                 break;
