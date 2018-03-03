@@ -1,11 +1,10 @@
 {
-  "name": "nesim-bot",
-  "version": "1.0.0",
+  "name": "NesimBot",
+  "version": "0.0.1",
   "description": "Just another one of those Discord bot",
-  "main": "bot.js",
+  "main": "main.js",
   "author": "Jack25440",
   "dependencies": {
-    "discord.io": "^2.5.3",
-    "winston": "^2.4.0"
+    "discord.js": "latest"
   }
 }
