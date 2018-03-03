@@ -1,7 +1,7 @@
 {
   "name": "NesimBot",
   "version": "0.0.1",
-  "description": "Just another one of those Discord bot",
+  "description": "Just another one of those Discord Bot",
   "main": "main.js",
   "author": "Jack25440",
   "dependencies": {
