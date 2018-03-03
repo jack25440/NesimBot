@@ -4,10 +4,16 @@ const config = require("./config.json"),
 
 bot.on("ready", () => {
     console.log("Bot logged in");
+    bot.user.setPresence({ game: {name: "with Dead People" } });
 })
 ;
 
 bot.on("message", message => {
+
+    if(message.author.bot) return;
+
+    if(message.content.indexOf(config.prefix) !== 0) return;
+
     // Do stuff
     if (message.content.startsWith(config.prefix)) {
     // Commands
@@ -21,6 +27,15 @@ bot.on("message", message => {
                 message.channel.send("Command not found!");
                 break;
         }
+
+        // switch (command) {
+        //     case "mote":
+        //         message.channel.send(":`:", ,":`:");
+        //         break;
+        //     default:
+        //         message.channel.send("Command not found!");
+        //         break;
+        //     }
     }
 });
 
